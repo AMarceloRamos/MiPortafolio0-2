@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adrian Ramos · Developer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     <!-- Core theme JS-->
+    <%= javascript_importmap_tags "scripts" %>
+
+    <!-- Favicon-->
+     <%= favicon_link_tag 'logo_vectorial.png', type:"image/x-icon" %>
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+            <script src="https://kit.fontawesome.com/41b8753ddc.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+         <%= stylesheet_link_tag "styles", "data-turbo-track": "reload" %>
+
+  </head>
+
+  <body>
+  <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <%= image_tag "logo_vectorial_pequeño", width:"100px", id:"logo_vectorial"%>
+                    <%# <br>
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Adrian Marcelo</span></a> %>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><%= link_to 'Home', home_path ,class:"nav-link"%>
+                            <li class="nav-item"><%= link_to 'Resume', resume_path ,class:"nav-link"%>
+                            <%# <li class="nav-item"><%= link_to 'Projects', projects_path ,class:"nav-link"%>
+                            <li class="nav-item"><%= link_to 'Contact', contact_forms_new_path ,class:"nav-link"%>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    <%= yield %>
+     <section class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                    <a class="text-gradient" href="https://www.instagram.com/adrianramos4504/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                    <a class="text-gradient" href="https://www.linkedin.com/in/adrián-ramos-b3869447/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                    <a class="text-gradient" href="https://github.com/AMarceloRamos" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a class="text-gradient" href="https://www.deviantart.com/adrian22ya" target="_blank"><i class="fa-brands fa-deviantart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Copyright &copy;<span class="text-gradient d-inline"> AdrianRamos2023</span></div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!">Privacy</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Terms</a>
+                        <span class="mx-1">&middot;</span>
+                        <%= link_to 'Contact', contact_forms_new_path %>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      
+  </body>
+</html>
